@@ -1,0 +1,250 @@
+.movie {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding-top: 40px;
+  background-color: #1e2334;
+}
+
+.movie__intro {
+  width: 80%;
+}
+
+.movie__backdrop {
+  width: 100%;
+  height: 500px;
+  object-fit:cover;
+  object-position: 0 35%;
+  border-radius: 10px;
+}
+
+.movie__detail {
+  align-items: center;
+  width: 75%;
+  display: flex;
+  position: relative;
+  bottom: 225px;
+}
+
+.movie__detailLeft {
+  margin-right: 30px;
+}
+
+.movie__poster {
+  width:300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+}
+
+.movie__detailRight {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content:space-between ;
+}
+
+.movie__detailRightTop > div{
+  text-shadow: 0px 0px 5px #000000;
+  margin-bottom: .5rem;
+}
+
+.movie__name {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.movie__rating{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.movie__voteCount {
+  margin-left: 1rem;
+}
+
+.movie__genres {
+  margin: 1.25rem 0;
+}
+
+.movie__genre {
+  padding: .5rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+
+.movie__detailRightBottom {
+  margin: 2rem 0;
+  flex: 0.8;
+}
+
+.synopsisText {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.synopsisText > div:last-of-type {
+  margin-left: auto;
+}
+
+.movie__links {
+  position: relative;
+  bottom: 220px;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.movie__heading {
+  font-size: 2.2rem;
+}
+
+.movie__Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (max-width:600px) {
+
+  .movie {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 40px;
+    background-color: #1e2334;
+  }
+  
+  .movie__intro {
+    width: 60%;
+    display: none;
+  }
+  
+  .movie__backdrop {
+    width: 100%;
+    height: 500px;
+    object-fit:cover;
+    object-position: 0 35%;
+    border-radius: 10px;
+    
+  }
+  
+  .movie__detail {
+    align-items: center;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0px;
+    
+  }
+  
+  .movie__detailLeft {
+    margin-right: 0px;
+  }
+  
+  .movie__poster {
+    width:250px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
+  }
+  
+  .movie__detailRight {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .movie__detailRightTop > div{
+    text-shadow: 0px 0px 5px #000000;
+    margin-bottom: .5rem;
+  }
+  
+  .movie__name {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  
+  .movie__rating{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .movie__voteCount {
+    margin-left: 1rem;
+  }
+  
+  .movie__genres {
+    margin: 1.25rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .movie__genre {
+    padding: .5rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 5px;
+
+  }
+  
+  
+  .movie__detailRightBottom {
+    margin: 2rem 0;
+    margin-bottom: 30px;
+    flex: 0.8;
+  }
+  
+  .synopsisText {
+    font-size: 24px;
+    color: #8ebbff;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .synopsisText > div:last-of-type {
+    margin-left: auto;
+  }
+  
+  .movie__links {
+    position: relative;
+    bottom: 220px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+  }
+  
+  .movie__heading {
+    font-size: 30px;
+  }
+  
+ 
+  
+}
