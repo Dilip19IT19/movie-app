@@ -7,7 +7,7 @@ import { TMovieDetails } from '../movies/[id]/page';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-function page() {
+function FaviouratePage() {
   const favMovies:TMovieDetails[]=useAppSelector((state)=>state.favMovies.movieArr);
   console.log(favMovies)
   const dispatch=useAppDispatch();
@@ -31,8 +31,8 @@ function page() {
 
 {favMovies.length===0 ? <div className=' flex w-full h-screen justify-center items-center'><p className=' btn-error btn-outline p-1 md:p-3 rounded-sm md:rounded-md'>Your favorite movies list is currently empty.</p></div> : favMovies.map((movie)=>{
         return (
-          <div>
-            <div key={movie.id} className="card card-compact my-2 w-72 md:w-96 bg-[#2f3651] shadow-xl">
+          <div key={movie.id}>
+            <div  className="card card-compact my-2 w-72 md:w-96 bg-[#2f3651] shadow-xl">
               <figure><img src={`${BASE_IMAGE_URL}${movie.backdrop_path}`} alt="" /></figure>
               <div className="card-body">
                 <h2 className="card-title md:text-xl text-lg text-[#8ebbff]">{movie.original_title}</h2>
@@ -87,4 +87,4 @@ function page() {
   )
 }
 
-export default page
+export default FaviouratePage

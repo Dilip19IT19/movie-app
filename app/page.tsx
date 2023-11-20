@@ -37,7 +37,7 @@ export default function Home() {
                 >
                     {
                         popularMovies.map(movie => (
-                            <Link style={{textDecoration:"none",color:"white"}} href={`movies/${movie.id}`} >
+                            <Link key={movie.id} style={{textDecoration:"none",color:"white"}} href={`movies/${movie.id}`} >
                                 <div className="posterImage">
                                     <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
                                 </div>

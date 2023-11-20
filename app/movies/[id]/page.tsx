@@ -40,7 +40,7 @@ export type TMovieDetails={
 
 
 
-export default function page({params}:TParams) {
+export default function MovieDetailPage({params}:TParams) {
 
   let[movieDetails,setMovieDetails]=useState<TMovieDetails | null>(null);
   let[similarMovies,setSimilarMovies]=useState<movie[]>([]);
@@ -176,7 +176,7 @@ export default function page({params}:TParams) {
 <div className=' list-none flex flex-wrap md:mt-10 mt-36 justify-around items-center relative bottom-44'>
   {similarMovies.map((movie)=>{
     return (
-      <li><Card data={movie}/></li>
+      <li key={movie.id}><Card data={movie}/></li>
     )
   })}
 </div>
