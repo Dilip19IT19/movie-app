@@ -1,3 +1,4 @@
+"use client"
 import { TMovieDetails } from "@/app/movies/[id]/page"
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
