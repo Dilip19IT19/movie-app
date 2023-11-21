@@ -8,7 +8,7 @@ type TMovie={
 }
 
 const initialState:TMovie={
-  movieArr:JSON.parse(localStorage.getItem("localMovies") || "[]")
+  movieArr:typeof window!==undefined && JSON.parse(localStorage.getItem("localMovies") || "[]")
 }
 
 const MovieSlice=createSlice({
@@ -17,11 +17,19 @@ const MovieSlice=createSlice({
   reducers:{
     addToFav:(state,action:PayloadAction<TMovieDetails>)=>{
       state.movieArr.push(action.payload);
-      localStorage.setItem("localMovies",JSON.stringify(state.movieArr));
+      if(typeof window!==undefined )
+      {
+        localStorage.setItem("localMovies",JSON.stringify(state.movieArr));
+      }
+      
     },
     removeFromFav:(state,action:PayloadAction<TMovieDetails>)=>{
       state.movieArr=state.movieArr.filter((movie)=>movie.id!==action.payload.id)
-      localStorage.setItem("localMovies",JSON.stringify(state.movieArr));
+      if(typeof window!==undefined )
+      {
+        localStorage.setItem("localMovies",JSON.stringify(state.movieArr));
+      }
+     
     }
   }
 })
