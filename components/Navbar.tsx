@@ -91,10 +91,7 @@ function Navbar() {
 
 <div className=' flex gap-12  '>
 
-  {/* <Link className='hover:text-[#8ebbff]  text-lg  text-slate-500 mx-2 ' href="/">Home</Link>
-  <Link className='hover:text-[#8ebbff]  text-lg text-slate-500 mx-2 ' href="/top-rated">Top Rated</Link>
-  <Link className='hover:text-[#8ebbff]  text-lg text-slate-500 mx-2 ' href="/popular">Popular</Link>
-  <Link className='hover:text-[#8ebbff]  text-lg text-slate-500 mx-2 ' href="/faviourates">Faviourates</Link> */}
+
 
   {navLinks.map((movie)=>{
     let isActive= pathname===movie.href;
