@@ -15,7 +15,15 @@ const MovieSlice=createSlice({
   initialState:initialState,
   reducers:{
     addToFav:(state,action:PayloadAction<TMovieDetails>)=>{
-      state.movieArr.push(action.payload);
+      let isPresent=false;
+      state.movieArr.map((movie)=>{
+        if(movie.id===action.payload.id)
+        {
+          isPresent=true;
+        }
+      })
+      isPresent ? state.movieArr : state.movieArr.push(action.payload);
+       
     },
     removeFromFav:(state,action:PayloadAction<TMovieDetails>)=>{
       state.movieArr=state.movieArr.filter((movie)=>movie.id!==action.payload.id)
