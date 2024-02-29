@@ -17,6 +17,7 @@ function Navbar() {
   let [windowWidth, setWindowWidth] = useState<number>(0);
   const router=useRouter();
   const pathname=usePathname();
+  const movieArr=useAppSelector((state)=>state.favMovies.movieArr);
 
   useEffect(() => {
     function handleResize() {
@@ -97,7 +98,13 @@ function Navbar() {
 
   {navLinks.map((movie)=>{
     let isActive= pathname===movie.href;
-    return (
+    if(movie.href==="/faviourates")
+    {
+      return (
+        <Link href={movie.href} className={ isActive ? "font-bold text-xl  text-[#8ebbff]" : "hover:text-[#8ebbff]  text-lg text-slate-500 mx-2"}>{movie.name}<sup className=' text-sm  text-[#8ebbff]'> {movieArr.length}</sup></Link>
+      )
+    }
+    return (      
       <Link href={movie.href} className={ isActive ? "font-bold text-xl  text-[#8ebbff]" : "hover:text-[#8ebbff]  text-lg text-slate-500 mx-2"}>{movie.name}</Link>
     )
 
