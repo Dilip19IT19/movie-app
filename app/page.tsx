@@ -39,7 +39,7 @@ export default function Home() {
 
     async function  fetchInfo(Ipaddress:string) 
     {
-      const res=await fetch(`http://ip-api.com/json/${Ipaddress}`);
+      const res=await fetch(`https://ip-api.com/json/${Ipaddress}`);
       const data:TRes=await res.json();
       setCountry(data.country);
       setCountrycode(data.countryCode);
