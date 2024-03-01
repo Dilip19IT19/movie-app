@@ -1,6 +1,7 @@
 import React from 'react'
 import { movie } from './MovieList'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type TCard={
   data:movie
