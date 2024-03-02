@@ -25,9 +25,9 @@ function Rated()
     {
       const res=await fetch(`http://ip-api.com/json/${Ipaddress}`);
       const data:TRes=await res.json();
-      setCountry(data.country);
-      setCountrycode(data.countryCode);
-      setCity(data.city);
+      setCountry(data.country.name);
+      setCountrycode(data.country.iso_code);
+      setCity(data.city.name);
     }
 
     fetchIPaddress();
