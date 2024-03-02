@@ -6,34 +6,35 @@ import Info from '@/components/Info';
 
 function Rated() 
 {
-  let[ipaddress,setIPaddress]=useState("");
+  
   let[country,setCountry]=useState("");
   let[city,setCity]=useState("");
   let[countrycode,setCountrycode]=useState("");
 
 
+  
   useEffect(()=>{
 
-    async function fetchIPaddress() 
-    {
-        const res=await fetch("https://api.ipify.org");
-        const data=await res.text();
-        setIPaddress(data);
-    }
+  
 
-    async function  fetchInfo(Ipaddress:string) 
+    async function  fetchInfo() 
     {
-      const res=await fetch(`http://ip-api.com/json/${Ipaddress}`);
+      const res=await fetch(`https://api.geoapify.com/v1/ipinfo?apiKey=2e30b3d4f3654d3884c9ca02cb728b39`);
       const data:TRes=await res.json();
       setCountry(data.country.name);
       setCountrycode(data.country.iso_code);
       setCity(data.city.name);
+      console.log(country);
+      console.log(countrycode);
+      console.log(city);
     }
 
-    fetchIPaddress();
-    fetchInfo(ipaddress);
+    
+    fetchInfo();
 
   },[])
+
+
   return (
     <div>
       {countrycode === "IN" ? <Info/> : <RatedList/>}
