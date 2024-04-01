@@ -30,7 +30,3 @@ The Movie App is a web application developed using Next.js 13, Tailwind CSS, Red
 #### Credits:
 - TMDB API for movie data.
 
-#### License:
-This project is licensed under the MIT License.
-
-Feel free to customize this README file further based on additional details or specific instructions related to your project.
